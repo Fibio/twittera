@@ -1,0 +1,14 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[dev-packages]
+ipdb = "==0.12"
+
+[packages]
+django = "==2.2.1"
+bootstrap4 = "==0.1.0"
+
+[requires]
+python_version = "3.7"
