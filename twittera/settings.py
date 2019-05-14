@@ -16,6 +16,7 @@ import sys
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+
 # Include BOOTSTRAP4_FOLDER in path
 BOOTSTRAP4_FOLDER = os.path.abspath(os.path.join(BASE_DIR, "..", "bootstrap4"))
 if BOOTSTRAP4_FOLDER not in sys.path:
@@ -44,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'bootstrap4',
     'accounts',
 ]
@@ -63,7 +65,7 @@ ROOT_URLCONF = 'twittera.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -128,8 +130,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
-
+STATIC_ROOT = os.path.join(PROJECT_DIR, 'staticfiles')
 
 # Settings for django-bootstrap4
 BOOTSTRAP4 = {
@@ -137,4 +138,18 @@ BOOTSTRAP4 = {
     "required_css_class": "bootstrap4-required",
     "javascript_in_head": True,
     "include_jquery": True,
+}
+
+# Twitter
+TW_TOKENS = {
+    "consumer_key": "U15arTIP0OaPeHudNnBzTcOLI",
+    "consumer_secret": "71mkyizHRI82tkMdBLqjfox3jbZ8RCYyIuTRShv0wzg7QaTPmP",
+    "access_token_key": "475667332-TUfcOlt0xPIouYWOv6oaJYIIjGj8RGGEH4yc3ied",
+    "access_token_secret": "2ap6ddO6OmkOKEAfVmPjLqmvOZfGZSZ48OhlxGoazKbt6",
+}
+
+DEFAULT_SEARCH_OPTIONS = {
+    "result_type": "recent",
+    "count": 90,
+    "language": LANGUAGE_CODE,
 }

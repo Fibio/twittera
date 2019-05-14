@@ -1,7 +1,11 @@
-from django.shortcuts import render
+from rest_framework.views import APIView
+from rest_framework.response import Response
 
-# Create your views here.
+from .twitter_api import TwitterAPI
 
 
-def get_stats(request):
-    pass
+class TweetsCountView(APIView):
+    """View to build tweets histogram."""
+
+    def get(self, request):
+        return Response(TwitterAPI().get_counts('brexit', 'Ukraine'))

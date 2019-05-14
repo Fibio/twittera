@@ -9,6 +9,9 @@ ipdb = "==0.12"
 [packages]
 django = "==2.2.1"
 bootstrap4 = "==0.1.0"
+djangorestframework = "*"
+python-twitter = "*"
+"django-bootstrap4" = "*"
 
 [requires]
 python_version = "3.7"
