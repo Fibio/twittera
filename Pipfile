@@ -5,6 +5,7 @@ name = "pypi"
 
 [dev-packages]
 ipdb = "==0.12"
+vcrpy = "*"
 
 [packages]
 django = "==2.2.1"
