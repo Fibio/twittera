@@ -146,10 +146,10 @@ BOOTSTRAP4 = {
 
 # Twitter
 TW_TOKENS = {
-    "consumer_key": "U15arTIP0OaPeHudNnBzTcOLI",
-    "consumer_secret": "71mkyizHRI82tkMdBLqjfox3jbZ8RCYyIuTRShv0wzg7QaTPmP",
-    "access_token_key": "475667332-TUfcOlt0xPIouYWOv6oaJYIIjGj8RGGEH4yc3ied",
-    "access_token_secret": "2ap6ddO6OmkOKEAfVmPjLqmvOZfGZSZ48OhlxGoazKbt6",
+    "consumer_key": os.getenv('TW_CONSUMER_KEY'),
+    "consumer_secret": os.getenv('TW_CONSUMER_SECRET'),
+    "access_token_key": os.getenv('TW_TOKEN_KEY'),
+    "access_token_secret": os.getenv('TW_TOKEN_SECRET'),
 }
 
 DEFAULT_SEARCH_OPTIONS = {

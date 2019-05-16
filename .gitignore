@@ -1,4 +1,5 @@
 .local
+.env
 **/*.pyc
 staticfiles/
 *-lock.*
