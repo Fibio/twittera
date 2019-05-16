@@ -8,4 +8,12 @@ class TweetsCountView(APIView):
     """View to build tweets histogram."""
 
     def get(self, request):
-        return Response(TwitterAPI().get_counts('brexit', 'Ukraine'))
+        return Response(TwitterAPI().get_counts('Brexit', 'Ukraine', 'Weekend'))
+
+
+class TweetsTableView(APIView):
+    """View to build tweets histogram."""
+
+    def get(self, request):
+        counts = TwitterAPI().get_counts('Brexit', 'Ukraine', 'Weekend')
+        return Response([{'word': key, 'count': value} for key, value in counts.items()])

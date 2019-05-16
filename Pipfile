@@ -5,14 +5,12 @@ name = "pypi"
 
 [dev-packages]
 ipdb = "==0.12"
-vcrpy = "*"
+vcrpy = "==2.0.1"
 
 [packages]
 django = "==2.2.1"
-bootstrap4 = "==0.1.0"
-djangorestframework = "*"
-python-twitter = "*"
-"django-bootstrap4" = "*"
+djangorestframework = "==3.9.4"
+python-twitter = "==3.5"
 
 [requires]
 python_version = "3.7"
